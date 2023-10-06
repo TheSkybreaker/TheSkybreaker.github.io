@@ -11,7 +11,7 @@
   <body>
     <main class="screen_container">
       <div class="scheda_content">
-        <div class="folder" tabindex="0">
+        <div class="folder" tabindex="0" id="folderEl">
           <img
             src="/assets/img/my-documents-folder-32x32.png"
             alt=""
@@ -19,7 +19,7 @@
           />
           <div class="folder_title">Alphard</div>
         </div>
-        <div class="window warning">
+        <div class="window warning" id="warning_modal">
           <div class="title-bar">
             <div class="title-bar-text">Warning</div>
           </div>
@@ -30,7 +30,7 @@
               <p>Open anyway?</p>
               <div class="button_container">
                 <button type="button" class="safe">YES</button>
-                <button type="button" class="corrupt">YES</button>
+                <button type="button" class="corrupt">NO</button>
               </div>
             </div>
           </div>
@@ -40,4 +40,5 @@
     </main>
   </body>
   <script src="/assets/js/glitch_text.js"></script>
+  <script src="/assets/js/open_warning.js"></script>
 </html>

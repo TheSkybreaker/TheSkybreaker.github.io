@@ -57,6 +57,7 @@
   width: 350px;
   z-index: 2;
   position: absolute;
+  display: none;
 }
 .warning_body {
   display: flex;

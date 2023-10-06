@@ -19,6 +19,7 @@ var Glitch = function (
   this.timePerLetter = timePerLetter;
   this.maxCount = Math.floor(this.timeGlitch / this.timePerLetter);
   this.count = 0;
+  this.execute = true;
 };
 
 Glitch.prototype.init = function () {
@@ -56,32 +57,41 @@ Glitch.prototype.randomize = function () {
   this.selector.innerText = randomString.join("");
 };
 
-Glitch.prototype.update = function (interval) {
+Glitch.prototype.update = async function () {
   if (this.count >= this.maxCount - 1) {
-    this.selector.innerText = this.innerText;
+    this.selector.innerText =
+      Math.floor(Math.random() * 10) % 2 == 0 ? "NO" : "YES";
     this.defineCharIndexToRandomize();
     let ctx = this;
-    let wait = setTimeout(function () {
-      ctx.count = 0;
-    }, this.timeBetweenGlitch);
+    await new Promise((resolve) => {
+      setTimeout(() => resolve((ctx.count = 0)), this.timeBetweenGlitch);
+    });
   } else {
     this.randomize();
     this.count++;
   }
 };
 
-Glitch.prototype.glitch = function () {
+Glitch.prototype.glitch = async function () {
   let ctx = this;
-  let interval = setInterval(function () {
-    ctx.update(this);
-  }, this.timePerLetter);
+
+  while (this.execute) {
+    await ctx.update();
+    await new Promise((resolve) =>
+      setTimeout(() => resolve(), this.timePerLetter)
+    );
+  }
 };
+
+Glitch.prototype.endExecution = function() {
+  this.execute = false
+}
 
 var arrayElements;
 var glitchArray = [];
 
-function initAllGlitch() {
-  arrayElements = document.querySelectorAll(".corrupt");
+function initAllGlitch(selector) {
+  arrayElements = document.querySelectorAll(selector);
   for (let i = 0; i < arrayElements.length; i++) {
     let selector = arrayElements[i];
     let randLetterNumber = 2 + Math.floor(Math.random() * 8);
@@ -90,7 +100,7 @@ function initAllGlitch() {
       selector,
       i,
       randLetterNumber,
-      200,
+      600,
       65,
       randGlitchPauseTime
     );
@@ -105,6 +115,3 @@ function update() {
     glitch.glitch();
   }
 }
-
-initAllGlitch();
-update();
