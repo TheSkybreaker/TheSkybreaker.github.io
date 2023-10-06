@@ -3,12 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/styles/resetter.css">
+    <link rel="stylesheet" href="/assets/styles/resetter.css" />
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
-    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/assets/styles/style.css" />
     <title>Scheda Alph</title>
   </head>
   <body>
-    <main class="screen_container"></main>
+    <main class="screen_container">
+      <div class="scheda_content">
+        <div class="folder" tabindex="0">
+          <img
+            src="/assets/img/my-documents-folder-32x32.png"
+            alt=""
+            class="folder_icon"
+          />
+          <div class="folder_title">Alphard</div>
+        </div>
+        <div class="window warning">
+          <div class="title-bar">
+            <div class="title-bar-text">Warning</div>
+          </div>
+          <div class="window-body warning_body">
+            <img src="/assets/img/msg_warning-0.png" alt="">
+            <div class="warning_text">
+              <p>Content in this folder is corrupt and may damage your device.</p>
+              <p>Open anyway?</p>
+              <div class="button_container">
+                <button type="button" class="safe">YES</button>
+                <button type="button" class="corrupt">YES</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">Data Save Inc.</footer>
+    </main>
   </body>
+  <script src="/assets/js/glitch_text.js"></script>
 </html>
