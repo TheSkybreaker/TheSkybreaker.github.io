@@ -6,7 +6,8 @@ var Glitch = function (
   numberOfGlitchedLetter,
   timeGlitch,
   timePerLetter,
-  timeBetweenGlitch
+  timeBetweenGlitch,
+  optionsArray = false
 ) {
   this.selector = selector;
   this.index = index;
@@ -20,6 +21,7 @@ var Glitch = function (
   this.maxCount = Math.floor(this.timeGlitch / this.timePerLetter);
   this.count = 0;
   this.execute = true;
+  this.optionsArray = optionsArray;
 };
 
 Glitch.prototype.init = function () {
@@ -59,8 +61,14 @@ Glitch.prototype.randomize = function () {
 
 Glitch.prototype.update = async function () {
   if (this.count >= this.maxCount - 1) {
-    this.selector.innerText =
-      Math.floor(Math.random() * 10) % 2 == 0 ? "NO" : "YES";
+    // TODO rifare
+    if (this.optionsArray) {
+      this.selector.innerText =
+        Math.random() < 0.5 ? this.optionsArray[0] : this.optionsArray[1];
+    } else {
+      this.selector.innerText = this.innerText;
+    }
+
     this.defineCharIndexToRandomize();
     let ctx = this;
     await new Promise((resolve) => {
@@ -83,14 +91,14 @@ Glitch.prototype.glitch = async function () {
   }
 };
 
-Glitch.prototype.endExecution = function() {
-  this.execute = false
-}
+Glitch.prototype.endExecution = function () {
+  this.execute = false;
+};
 
-var arrayElements;
-var glitchArray = [];
+function initAllGlitch(selector, optionsArray = false) {
+  let glitchArray = [];
+  let arrayElements;
 
-function initAllGlitch(selector) {
   arrayElements = document.querySelectorAll(selector);
   for (let i = 0; i < arrayElements.length; i++) {
     let selector = arrayElements[i];
@@ -102,16 +110,12 @@ function initAllGlitch(selector) {
       randLetterNumber,
       600,
       65,
-      randGlitchPauseTime
+      randGlitchPauseTime,
+      optionsArray
     );
     glitch.init();
     glitchArray.push(glitch);
   }
-}
 
-function update() {
-  for (let i = 0; i < glitchArray.length; i++) {
-    let glitch = glitchArray[i];
-    glitch.glitch();
-  }
+  return glitchArray;
 }

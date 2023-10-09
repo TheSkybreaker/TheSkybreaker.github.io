@@ -1,5 +1,5 @@
 let folderEl = document.getElementById("folderEl");
-let warningEl = document.getElementById('warning_modal')
+let warningEl = document.getElementById("warning_modal");
 let clickNum = 0;
 
 folderEl.addEventListener("click", () => {
@@ -8,8 +8,12 @@ folderEl.addEventListener("click", () => {
     return;
   }
   clickNum = 0;
-  warningEl.style.display = 'block'
+  warningEl.style.display = "block";
 
-  initAllGlitch(".corrupt");
-  update();
+  let glitchArray = initAllGlitch(".corrupt", ["NO", "YES"]);
+
+  for (let i = 0; i < glitchArray.length; i++) {
+    let glitch = glitchArray[i];
+    glitch.glitch();
+  }
 });
