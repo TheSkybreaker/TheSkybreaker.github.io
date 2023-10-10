@@ -11,6 +11,7 @@
   <body>
     <main class="screen_container">
       <div class="scheda_content">
+        <!-- FOLDER ICON -->
         <div class="folder" tabindex="0" id="folderEl">
           <img
             src="/assets/img/my-documents-folder-32x32.png"
@@ -19,19 +20,45 @@
           />
           <div class="folder_title">Alphard</div>
         </div>
+
+        <!-- WARNING MODAL -->
         <div class="window warning" id="warning_modal">
           <div class="title-bar">
             <div class="title-bar-text">Warning</div>
           </div>
           <div class="window-body warning_body">
-            <img src="/assets/img/msg_warning-0.png" alt="">
+            <img src="/assets/img/msg_warning-0.png" alt="" />
             <div class="warning_text">
-              <p>Content in this folder is corrupt and may damage your device.</p>
+              <p>
+                Content in this folder is corrupt and may damage your device.
+              </p>
               <p>Open anyway?</p>
               <div class="button_container">
                 <button type="button" class="safe corrupt">YES</button>
                 <button type="button" class="corrupt">NO</button>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOLDER CONTENT -->
+        <div class="window folder_content">
+          <div class="title-bar">
+            <div class="title-bar-text">Alphard</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Maximize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="folder_content_window">
+            <div class="window-body">
+              <p>FILE INFO</p>
+            </div>
+            <div class="status-bar">
+              <p class="status-bar-field">4 objects(s)</p>
+              <p class="status-bar-field"></p>
+              <p class="status-bar-field">Data Save Inc.</p>
             </div>
           </div>
         </div>

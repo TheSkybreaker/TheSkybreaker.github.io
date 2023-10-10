@@ -3,6 +3,11 @@
     box-sizing: border-box;
     image-rendering: pixelated;
     font-size: 14px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .screen_container {
@@ -62,10 +67,11 @@
 }
 
 .warning {
-    width: 350px;
-    z-index: 2;
+    width: 320px;
+    z-index: -2;
     position: absolute;
-    display: none;
+    display: block;
+    opacity: 0;
 
     &_body {
         display: flex;
@@ -79,12 +85,32 @@
             width: 250px;
         }
     }
+
+    & button{
+        cursor: pointer;
+    }
+}
+
+.folder_content {
+    width: 350px;
+    height: 300px;
+    z-index: 2;
+    position: absolute;
+    background-color: #fdffff;
+    opacity: 1;
+
+    &_window {
+        height: 267px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 
 .button_container {
     margin-top: 10px;
     display: flex;
-    
+
     .safe {
         margin-right: 15px;
     }
@@ -108,4 +134,11 @@
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
     }
+}
+
+// In fondo perché il css è un po' paxxerello
+.active {
+    z-index: 2;
+    opacity: 1;
+    transition: all 0.5s ease-out;
 }

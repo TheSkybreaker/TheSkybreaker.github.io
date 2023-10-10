@@ -1,3 +1,6 @@
+// Mi secca spiegare. Magia magia magia, terribile, non è nemmeno mio. Lo rifarò, nel frattempo va bene
+// I commenti sono tutti miei
+
 const chars = "☺Σ×Π#-_¯—→↓↑←0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ";
 
 var Glitch = function (
@@ -21,6 +24,7 @@ var Glitch = function (
   this.maxCount = Math.floor(this.timeGlitch / this.timePerLetter);
   this.count = 0;
   this.execute = true;
+  // I like the option to have it cycle through two texts. Only two for now
   this.optionsArray = optionsArray;
 };
 
@@ -70,7 +74,10 @@ Glitch.prototype.update = async function () {
     }
 
     this.defineCharIndexToRandomize();
+    // I don't really like the ctx=this method, using a class name or a function in the correct way would be way better
+    // TODO: make a single class
     let ctx = this;
+    // Less ram overhead with a promise based method to not cycle through the function every time
     await new Promise((resolve) => {
       setTimeout(() => resolve((ctx.count = 0)), this.timeBetweenGlitch);
     });
@@ -83,16 +90,20 @@ Glitch.prototype.update = async function () {
 Glitch.prototype.glitch = async function () {
   let ctx = this;
 
-  while (this.execute) {
+  while (ctx.execute) {
     await ctx.update();
+    // Less ram overhead with a promise based method to not cycle through the function every time
     await new Promise((resolve) =>
       setTimeout(() => resolve(), this.timePerLetter)
     );
   }
 };
 
+// Possibilità di fermare il tutto
 Glitch.prototype.endExecution = function () {
-  this.execute = false;
+  let ctx = this
+  ctx.execute = false;
+  ctx.selector.innerText = ctx.innerText;
 };
 
 function initAllGlitch(selector, optionsArray = false) {
@@ -108,7 +119,7 @@ function initAllGlitch(selector, optionsArray = false) {
       selector,
       i,
       randLetterNumber,
-      600,
+      350,
       65,
       randGlitchPauseTime,
       optionsArray
