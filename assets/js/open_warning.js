@@ -4,12 +4,12 @@ let clickNum = 0;
 let glitchArray = [];
 
 const toggleEl = async (el) => {
-  document.querySelectorAll("*").forEach((el) => (el.style.cursor = "wait"));
+  document.querySelectorAll("*").forEach((el) => (el.classList.add('wait')));
   await new Promise((resolve) => {
     setTimeout(resolve, 2000);
   });
   el.classList.toggle("active");
-  document.querySelectorAll("*").forEach((el) => el.removeAttribute("style"));
+  document.querySelectorAll("*").forEach((el) => el.classList.remove("wait"));
 };
 
 folderEl.addEventListener("click", async () => {
@@ -19,8 +19,8 @@ folderEl.addEventListener("click", async () => {
   }
   clickNum = 0;
 
-  await toggleEl(warningEl);
   glitchArray = initAllGlitch(".corrupt", ["NO", "YES"]);
+  toggleEl(warningEl);
 
   for (let i = 0; i < glitchArray.length; i++) {
     let glitch = glitchArray[i];
@@ -37,5 +37,8 @@ warningBTNs.forEach((el) => {
     await toggleEl(document.querySelector(".folder_content"));
     glitchArray.map((glitch) => glitch.endExecution());
     warningBTNs.forEach((btn) => (btn.disabled = false));
+
+    glitchArray = initAllGlitch(".corrupt", ['CORVUS', 'AARASKA']);
+    glitchArray.map(e=>e.glitch())
   });
 });

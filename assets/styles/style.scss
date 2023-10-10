@@ -3,11 +3,6 @@
     box-sizing: border-box;
     image-rendering: pixelated;
     font-size: 14px;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .screen_container {
@@ -32,16 +27,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     &_title {
         margin-top: 5px;
         padding: 1px 2px;
         border: 1px solid rgba(0, 0, 0, 0);
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     &_icon {
         width: 32px;
         height: 32px;
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     &:hover {
@@ -63,7 +73,100 @@
             border: white dotted 1px;
         }
     }
+}
 
+.document {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 25px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &_title {
+        margin-top: 5px;
+        padding: 1px 2px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        height: 24px;
+    }
+
+    &_icon {
+        width: 32px;
+        height: 32px;
+        bottom: 29px;
+        position: absolute;
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        .document_icon {
+            width: 32px;
+            height: 32px;
+            mask-image: url("/assets/img/notepad-file-32x32.png");
+            -webkit-mask-image: url("/assets/img/notepad-file-32x32.png");
+            background: #010081;
+            opacity: 0.5;
+        }
+
+        .document_title {
+            background: #010081;
+            color: #eaeaea;
+            border: white dotted 1px;
+        }
+    }
+
+}
+
+.datafolder {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 110px;
+    font-weight: 600;
+
+    &>img {
+        height: 32px;
+        width: 32px;
+    }
+
+    &>div {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        z-index: 1;
+    }
+
+    &>div::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: .07em;
+        height: .2em;
+        width: 100%;
+        background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
+        z-index: -1;
+        transition: height .25s cubic-bezier(.6, 0, .4, 1);
+    }
 }
 
 .warning {
@@ -86,24 +189,58 @@
         }
     }
 
-    & button{
+    & button {
         cursor: pointer;
     }
 }
 
 .folder_content {
-    width: 350px;
-    height: 300px;
+    width: 330px;
+    height: 220px;
+    z-index: -2;
+    position: absolute;
+    background-color: #fdffff;
+    opacity: 1;
+
+    &_window {
+        height: 187px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &>.window-body {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+            color: #000;
+        }
+    }
+}
+
+.text_content {
+    width: 400px;
+    height: 320px;
     z-index: 2;
     position: absolute;
     background-color: #fdffff;
     opacity: 1;
 
     &_window {
-        height: 267px;
+        height: 287px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        &>.window-body {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+            color: #000;
+        }
     }
 }
 
@@ -114,6 +251,10 @@
     .safe {
         margin-right: 15px;
     }
+}
+
+.title-bar-controls>button:hover {
+    cursor: pointer;
 }
 
 .footer {
@@ -141,4 +282,13 @@
     z-index: 2;
     opacity: 1;
     transition: all 0.5s ease-out;
+}
+
+// Eheh, memes
+.wait {
+    cursor: wait !important;
+
+    &:hover {
+        cursor: wait !important;
+    }
 }

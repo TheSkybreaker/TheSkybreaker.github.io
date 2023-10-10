@@ -44,16 +44,37 @@
         <!-- FOLDER CONTENT -->
         <div class="window folder_content">
           <div class="title-bar">
-            <div class="title-bar-text">Alphard</div>
+            <div class="title-bar-text">ALPHARD</div>
             <div class="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Maximize"></button>
               <button aria-label="Close"></button>
             </div>
           </div>
           <div class="folder_content_window">
             <div class="window-body">
-              <p>FILE INFO</p>
+              <div class="datafolder">
+                <img src="/assets/img/folder-open-32x32.png" alt="" />
+                <div>ALPHARD</div>
+              </div>
+              <div class="document" tabindex="1">
+                <img src="/assets/img/notepad-file-32x32.png" alt="" />
+                <div class="document_icon"></div>
+                <div class="document_title">ID</div>
+              </div>
+              <div class="document" tabindex="2">
+                <img src="/assets/img/notepad-file-32x32.png" alt="" />
+                <div class="document_icon"></div>
+                <div class="document_title">PAST</div>
+              </div>
+              <div class="document" tabindex="3">
+                <img src="/assets/img/notepad-file-32x32.png" alt="" />
+                <div class="document_icon"></div>
+                <div class="document_title corrupt">CORVUS</div>
+              </div>
+              <div class="document" tabindex="4">
+                <img src="/assets/img/notepad-file-32x32.png" alt="" />
+                <div class="document_icon"></div>
+                <div class="document_title">OFF</div>
+              </div>
             </div>
             <div class="status-bar">
               <p class="status-bar-field">4 objects(s)</p>
@@ -62,10 +83,34 @@
             </div>
           </div>
         </div>
+
+        <!-- TEXT CONTENT -->
+        <div class="window text_content">
+          <div class="title-bar">
+            <div class="title-bar-text">{{Title}}</div>
+            <div class="title-bar-controls">
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="text_content_window">
+            <div class="window-body">
+              <p>TEXT</p>
+              
+            </div>
+            <div class="status-bar">
+              <p class="status-bar-field">{{n}} Word(s)</p>
+              <p class="status-bar-field">Page 1</p>
+              <p class="status-bar-field">CPU Usage: {{r1-100}}</p>
+            </div>
+          </div>
+        </div>
       </div>
+
+
       <footer class="footer">Data Save Inc.</footer>
     </main>
   </body>
   <script src="/assets/js/glitch_text.js"></script>
   <script src="/assets/js/open_warning.js"></script>
+  <script src="/assets/js/folderController.js"></script>
 </html>
