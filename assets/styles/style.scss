@@ -62,8 +62,8 @@
         .folder_icon {
             width: 32px;
             height: 32px;
-            mask-image: url("/assets/img/my-documents-folder-32x32.png");
-            -webkit-mask-image: url("/assets/img/my-documents-folder-32x32.png");
+            mask-image: url("/assets/img/old_icons/my-documents-folder-32x32.png");
+            -webkit-mask-image: url("/assets/img/old_icons/my-documents-folder-32x32.png");
             background: #010081;
             opacity: 0.5;
         }
@@ -82,7 +82,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 90px;
     margin-top: 25px;
+
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -121,8 +123,8 @@
         .document_icon {
             width: 32px;
             height: 32px;
-            mask-image: url("/assets/img/notepad-file-32x32.png");
-            -webkit-mask-image: url("/assets/img/notepad-file-32x32.png");
+            mask-image: url("/assets/img/old_icons/notepad-file-32x32.png");
+            -webkit-mask-image: url("/assets/img/old_icons/notepad-file-32x32.png");
             background: #010081;
             opacity: 0.5;
         }
@@ -154,6 +156,7 @@
         text-decoration: none;
         color: inherit;
         z-index: 1;
+        padding-right: 25px;
     }
 
     &>div::after {
@@ -167,6 +170,12 @@
         z-index: -1;
         transition: height .25s cubic-bezier(.6, 0, .4, 1);
     }
+}
+
+.filelist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .warning {
@@ -196,23 +205,23 @@
 
 .folder_content {
     width: 330px;
-    height: 220px;
+    height: 260px;
     z-index: -2;
     position: absolute;
     background-color: #fdffff;
-    opacity: 1;
+    opacity: 0;
 
     &_window {
-        height: 187px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        height: 227px;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
 
         &>.window-body {
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            // flex-direction: row;
+            // flex-wrap: wrap;
+            // justify-content: space-around;
             margin-top: 20px;
             color: #000;
         }
@@ -222,10 +231,10 @@
 .text_content {
     width: 400px;
     height: 320px;
-    z-index: 2;
+    z-index: -2;
     position: absolute;
     background-color: #fdffff;
-    opacity: 1;
+    opacity: 0;
 
     &_window {
         height: 287px;
@@ -238,7 +247,6 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
-            margin-top: 20px;
             color: #000;
         }
     }
@@ -279,9 +287,9 @@
 
 // In fondo perché il css è un po' paxxerello
 .active {
-    z-index: 2;
+    z-index: 1;
     opacity: 1;
-    transition: all 0.5s ease-out;
+    transition: opacity 0.5s ease-out;
 }
 
 // Eheh, memes

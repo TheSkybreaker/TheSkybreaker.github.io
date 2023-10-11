@@ -14,7 +14,7 @@
         <!-- FOLDER ICON -->
         <div class="folder" tabindex="0" id="folderEl">
           <img
-            src="/assets/img/my-documents-folder-32x32.png"
+            src="/assets/img/old_icons/my-documents-folder-32x32.png"
             alt=""
             class="folder_icon"
           />
@@ -27,7 +27,7 @@
             <div class="title-bar-text">Warning</div>
           </div>
           <div class="window-body warning_body">
-            <img src="/assets/img/msg_warning-0.png" alt="" />
+            <img src="/assets/img/old_icons/msg_warning-0.png" alt="" />
             <div class="warning_text">
               <p>
                 Content in this folder is corrupt and may damage your device.
@@ -46,34 +46,50 @@
           <div class="title-bar">
             <div class="title-bar-text">ALPHARD</div>
             <div class="title-bar-controls">
-              <button aria-label="Close"></button>
+              <button aria-label="Close" id="folder_close"></button>
             </div>
           </div>
           <div class="folder_content_window">
             <div class="window-body">
               <div class="datafolder">
-                <img src="/assets/img/folder-open-32x32.png" alt="" />
+                <img src="/assets/img/old_icons/folder-open-32x32.png" alt="" />
                 <div>ALPHARD</div>
               </div>
-              <div class="document" tabindex="1">
-                <img src="/assets/img/notepad-file-32x32.png" alt="" />
-                <div class="document_icon"></div>
-                <div class="document_title">ID</div>
-              </div>
-              <div class="document" tabindex="2">
-                <img src="/assets/img/notepad-file-32x32.png" alt="" />
-                <div class="document_icon"></div>
-                <div class="document_title">PAST</div>
-              </div>
-              <div class="document" tabindex="3">
-                <img src="/assets/img/notepad-file-32x32.png" alt="" />
-                <div class="document_icon"></div>
-                <div class="document_title corrupt">CORVUS</div>
-              </div>
-              <div class="document" tabindex="4">
-                <img src="/assets/img/notepad-file-32x32.png" alt="" />
-                <div class="document_icon"></div>
-                <div class="document_title">OFF</div>
+              <div class="filelist">
+                <div class="document" tabindex="1">
+                  <img
+                    src="/assets/img/old_icons/notepad-file-32x32.png"
+                    alt=""
+                  />
+                  <div class="document_icon"></div>
+                  <div class="document_title">ID.txt</div>
+                </div>
+                <div class="document" tabindex="2">
+                  <img
+                    src="/assets/img/old_icons/notepad-file-32x32.png"
+                    alt=""
+                  />
+                  <div class="document_icon"></div>
+                  <div class="document_title">PAST.txt</div>
+                </div>
+                <div class="document" tabindex="3">
+                  <img
+                    src="/assets/img/old_icons/notepad-file-32x32.png"
+                    alt=""
+                  />
+                  <div class="document_icon"></div>
+                  <div class="document_title corrupt">
+                    CORVUS<span>.txt</span>
+                  </div>
+                </div>
+                <div class="document" tabindex="4">
+                  <img
+                    src="/assets/img/old_icons/notepad-file-32x32.png"
+                    alt=""
+                  />
+                  <div class="document_icon"></div>
+                  <div class="document_title">OFF.txt</div>
+                </div>
               </div>
             </div>
             <div class="status-bar">
@@ -87,25 +103,33 @@
         <!-- TEXT CONTENT -->
         <div class="window text_content">
           <div class="title-bar">
-            <div class="title-bar-text">{{Title}}</div>
+            <div class="title-bar-text" id="doc_title">{{Title}}</div>
             <div class="title-bar-controls">
-              <button aria-label="Close"></button>
+              <button aria-label="Close" id="doc_close"></button>
             </div>
           </div>
           <div class="text_content_window">
             <div class="window-body">
-              <p>TEXT</p>
-              
+              <iframe
+                src=""
+                frameborder="0"
+                width="450"
+                height="245"
+                id="doc_src"
+              ></iframe>
             </div>
             <div class="status-bar">
-              <p class="status-bar-field">{{n}} Word(s)</p>
+              <p class="status-bar-field">
+                <span id="doc_word_field">{{n}}</span> Word(s)
+              </p>
               <p class="status-bar-field">Page 1</p>
-              <p class="status-bar-field">CPU Usage: {{r1-100}}</p>
+              <p class="status-bar-field">
+                CPU Usage: <span id="doc_cpu_usage">{{r1-100}}</span>%
+              </p>
             </div>
           </div>
         </div>
       </div>
-
 
       <footer class="footer">Data Save Inc.</footer>
     </main>

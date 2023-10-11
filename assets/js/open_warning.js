@@ -38,7 +38,7 @@ warningBTNs.forEach((el) => {
     glitchArray.map((glitch) => glitch.endExecution());
     warningBTNs.forEach((btn) => (btn.disabled = false));
 
-    glitchArray = initAllGlitch(".corrupt", ['CORVUS', 'AARASKA']);
+    glitchArray = initAllGlitch(".corrupt", ['CORVUS.txt', 'AARASKA.txt']);
     glitchArray.map(e=>e.glitch())
   });
 });
