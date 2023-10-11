@@ -54,10 +54,10 @@ documentList.forEach((docEl) => {
     let openFile = docEl.innerText.replace(".txt", "").toLowerCase();
 
     if (filesArray.includes(openFile)) {
-      iframe.src = `/assets/content/${openFile}.html`;
+      iframe.src = `assets/content/${openFile}.html`;
       title.innerText = docEl.innerText;
     } else {
-      iframe.src = `/assets/content/corvus.html`;
+      iframe.src = `assets/content/corvus.html`;
       title.innerText = "CORVUS.txt";
     }
 
