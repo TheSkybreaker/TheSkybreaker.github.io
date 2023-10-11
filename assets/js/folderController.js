@@ -28,6 +28,7 @@ let iframe = document.querySelector("#doc_src");
 let wordsNumber = document.querySelector("#doc_word_field");
 let cpuUsage = document.querySelector("#doc_cpu_usage");
 let title = document.querySelector("#doc_title");
+let oldDocFocus;
 
 iframe.onload = () => {
   wordsNumber.innerText = iframe.contentWindow.document
@@ -42,10 +43,11 @@ documentList.forEach((docEl) => {
   docEl.addEventListener("click", async () => {
     if (document.activeElement === docEl && folderClickNum == 0) {
       folderClickNum++;
+      oldDocFocus = document.activeElement;
       return;
     }
 
-    if (document.activeElement !== docEl) {
+    if (oldDocFocus !== docEl) {
       folderClickNum = 0;
       return;
     }
