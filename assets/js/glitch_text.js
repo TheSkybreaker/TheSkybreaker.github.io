@@ -113,7 +113,7 @@ function initAllGlitch(selector, optionsArray = false) {
   arrayElements = document.querySelectorAll(selector);
   for (let i = 0; i < arrayElements.length; i++) {
     let selector = arrayElements[i];
-    let randLetterNumber = 2 + Math.floor(Math.random() * 8);
+    let randLetterNumber = 2 + Math.floor(Math.random() * 500);
     let randGlitchPauseTime = 500 + Math.floor(Math.random() * 2500);
     let glitch = new Glitch(
       selector,

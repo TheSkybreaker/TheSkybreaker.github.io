@@ -3,4 +3,8 @@
   box-sizing: border-box;
   image-rendering: pixelated;
   font-size: 14px;
+}
+
+p {
+  padding: 5px 0px;
 }/*# sourceMappingURL=textSection.css.map */

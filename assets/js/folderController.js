@@ -28,20 +28,28 @@ let iframe = document.querySelector("#doc_src");
 let wordsNumber = document.querySelector("#doc_word_field");
 let cpuUsage = document.querySelector("#doc_cpu_usage");
 let title = document.querySelector("#doc_title");
+let textGlitchArray = [];
 let oldDocFocus;
+let iframeDocument;
 
 iframe.onload = () => {
-  wordsNumber.innerText = iframe.contentWindow.document
+  iframeDocument = iframe.contentWindow.document;
+  wordsNumber.innerText = iframeDocument
     .querySelector("main")
     .innerText.trim()
     .split(/\s+/).length;
-    cpuUsage.innerText = Math.floor(randn_bm(0, 100, 1))
+
+  cpuUsage.innerText = Math.floor(randn_bm(0, 100, 1));
 };
 
 let folderClickNum = 0;
 documentList.forEach((docEl) => {
   docEl.addEventListener("click", async () => {
-    if (document.activeElement === docEl && folderClickNum == 0) {
+    if (
+      document.activeElement === docEl &&
+      folderClickNum == 0 &&
+      !hasTouchScreen
+    ) {
       folderClickNum++;
       oldDocFocus = document.activeElement;
       return;

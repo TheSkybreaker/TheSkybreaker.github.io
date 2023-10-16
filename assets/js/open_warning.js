@@ -2,6 +2,11 @@ let folderEl = document.getElementById("folderEl");
 let warningEl = document.getElementById("warning_modal");
 let clickNum = 0;
 let glitchArray = [];
+let hasTouchScreen = false;
+
+if ("maxTouchPoints" in navigator) {
+  hasTouchScreen = navigator.maxTouchPoints > 0;
+} 
 
 const toggleEl = async (el) => {
   document.querySelectorAll("*").forEach((el) => (el.classList.add('wait')));
@@ -13,7 +18,7 @@ const toggleEl = async (el) => {
 };
 
 folderEl.addEventListener("click", async () => {
-  if (document.activeElement === folderEl && clickNum == 0) {
+  if (document.activeElement === folderEl && clickNum == 0 && !hasTouchScreen) {
     clickNum++;
     return;
   }
