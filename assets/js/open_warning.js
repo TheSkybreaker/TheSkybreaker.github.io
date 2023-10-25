@@ -11,7 +11,7 @@ if ("maxTouchPoints" in navigator) {
 const toggleEl = async (el) => {
   document.querySelectorAll("*").forEach((el) => (el.classList.add('wait')));
   await new Promise((resolve) => {
-    setTimeout(resolve, 2000);
+    setTimeout(resolve, 1500);
   });
   el.classList.toggle("active");
   document.querySelectorAll("*").forEach((el) => el.classList.remove("wait"));
