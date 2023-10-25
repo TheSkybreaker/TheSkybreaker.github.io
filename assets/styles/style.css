@@ -188,15 +188,15 @@
 }
 
 .text_content {
-  width: 400px;
-  height: 320px;
+  width: 420px;
+  height: 350px;
   z-index: -2;
   position: absolute;
   background-color: #fdffff;
   opacity: 0;
 }
 .text_content_window {
-  height: 287px;
+  height: 317px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

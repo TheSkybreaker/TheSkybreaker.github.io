@@ -1,7 +1,7 @@
 * {
     font-family: "Pixelated MS Sans Serif";
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 p {
@@ -9,16 +9,16 @@ p {
     line-height: 20px;
 }
 
-main>a>img {
-    display: inline;
-    float: left;
-    padding-right: 8px;
+h3 {
+    text-align: center;
 }
 
-.wait {
-    cursor: wait !important;
+hr {
+    margin-bottom: 5px;
+}
 
-    &:hover {
-        cursor: wait !important;
+.banner {
+    img {
+        display: inline;
     }
 }
