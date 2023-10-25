@@ -40,6 +40,7 @@ iframe.onload = () => {
     .split(/\s+/).length;
 
   cpuUsage.innerText = Math.floor(randn_bm(0, 100, 1));
+  toggleEl(document.querySelector(".text_content"));
 };
 
 let folderClickNum = 0;
@@ -55,7 +56,7 @@ documentList.forEach((docEl) => {
       return;
     }
 
-    if (oldDocFocus !== docEl) {
+    if (oldDocFocus !== docEl && !hasTouchScreen) {
       folderClickNum = 0;
       return;
     }
@@ -70,8 +71,6 @@ documentList.forEach((docEl) => {
       iframe.src = `assets/content/corvus.html`;
       title.innerText = "CORVUS.txt";
     }
-
-    toggleEl(document.querySelector(".text_content"));
   });
 });
 

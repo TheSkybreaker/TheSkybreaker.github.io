@@ -6,13 +6,15 @@ let hasTouchScreen = false;
 
 if ("maxTouchPoints" in navigator) {
   hasTouchScreen = navigator.maxTouchPoints > 0;
-} 
+}
 
 const toggleEl = async (el) => {
-  document.querySelectorAll("*").forEach((el) => (el.classList.add('wait')));
-  await new Promise((resolve) => {
-    setTimeout(resolve, 1500);
-  });
+  document.querySelectorAll("*").forEach((el) => el.classList.add("wait"));
+  if (!hasTouchScreen) {
+    await new Promise((resolve) => {
+      setTimeout(resolve, 1500);
+    });
+  }
   el.classList.toggle("active");
   document.querySelectorAll("*").forEach((el) => el.classList.remove("wait"));
 };
@@ -37,13 +39,13 @@ let warningBTNs = document.querySelectorAll("button.corrupt");
 
 warningBTNs.forEach((el) => {
   el.addEventListener("click", async () => {
-    warningBTNs.forEach((btn)=>btn.disabled = true)
+    warningBTNs.forEach((btn) => (btn.disabled = true));
     toggleEl(warningEl);
     await toggleEl(document.querySelector(".folder_content"));
     glitchArray.map((glitch) => glitch.endExecution());
     warningBTNs.forEach((btn) => (btn.disabled = false));
 
-    glitchArray = initAllGlitch(".corrupt", ['CORVUS.txt', 'AARASKA.txt']);
-    glitchArray.map(e=>e.glitch())
+    glitchArray = initAllGlitch(".corrupt", ["CORVUS.txt", "AARASKA.txt"]);
+    glitchArray.map((e) => e.glitch());
   });
 });

@@ -8,7 +8,9 @@
 .screen_container {
   width: 530px;
   height: 530px;
+  overflow: hidden;
   display: flex;
+  position: relative;
   justify-content: space-between;
   flex-direction: column;
   background: #008080;
