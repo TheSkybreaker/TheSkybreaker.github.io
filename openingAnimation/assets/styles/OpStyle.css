@@ -1,3 +1,10 @@
+* {
+  font-family: "Pixelated MS Sans Serif";
+  box-sizing: border-box;
+  image-rendering: pixelated;
+  font-size: 16px;
+}
+
 main {
   background-color: #323133;
   width: 530px;
@@ -56,9 +63,46 @@ div#centerDiv {
   z-index: 1;
 }
 
-#content {
-  width: 80%;
-  height: 80%;
-  border: solid red 1px;
+#container {
+  width: 100%;
+  height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content {
+  border: solid red 1px;
+  width: 90%;
+  height: 90%;
+  color: #0B8A20;
+  display: none;
+}
+
+.cursor {
+  position: relative;
+  display: inline-block;
+}
+
+.cursor::after {
+  content: "";
+  top: 0;
+  display: inline-block;
+  background-color: #606060;
+  vertical-align: top;
+  width: 8px;
+  /* Set height to the line height of .text */
+  height: 24px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=OpStyle.css.map */
