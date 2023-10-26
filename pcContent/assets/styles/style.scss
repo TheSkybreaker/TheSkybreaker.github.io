@@ -10,7 +10,7 @@
     height: 530px;
     overflow: hidden;
     display: flex;
-    position: absolute;
+    position: relative;
     justify-content: space-between;
     flex-direction: column;
     background: #008080;
@@ -31,9 +31,8 @@
     justify-content: center;
     align-items: center;
     height: 490px;
-    position: relative;
 
-    &:after {
+    &:before {
         content: '';
         position: absolute;
         top: 0px;
@@ -301,6 +300,8 @@
     font-size: large;
     background: #c3c3c3;
     text-align: center;
+    // ehe memes
+    z-index: 1001;
 
     &:before {
         position: absolute;

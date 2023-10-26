@@ -10,7 +10,7 @@
   height: 530px;
   overflow: hidden;
   display: flex;
-  position: absolute;
+  position: relative;
   justify-content: space-between;
   flex-direction: column;
   background: #008080;
@@ -29,9 +29,8 @@
   justify-content: center;
   align-items: center;
   height: 490px;
-  position: relative;
 }
-.scheda_content:after {
+.scheda_content:before {
   content: "";
   position: absolute;
   top: 0px;
@@ -252,6 +251,7 @@
   font-size: large;
   background: #c3c3c3;
   text-align: center;
+  z-index: 1001;
 }
 .footer:before {
   position: absolute;
