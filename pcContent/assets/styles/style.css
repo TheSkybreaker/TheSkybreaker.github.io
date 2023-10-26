@@ -16,11 +16,35 @@
   background: #008080;
 }
 
+@keyframes lines {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px 25px;
+  }
+}
 .scheda_content {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 490px;
+  position: relative;
+}
+.scheda_content:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1000;
+  background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 7px);
+  background-size: 100% 5px;
+  animation: lines 5s ease-out infinite;
+  opacity: 0.3;
+  mix-blend-mode: color-burn;
+  pointer-events: none;
 }
 
 .folder {
