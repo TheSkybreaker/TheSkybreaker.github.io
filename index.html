@@ -3,138 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/styles/resetter.css" />
-    <link rel="stylesheet" href="https://unpkg.com/98.css" />
-    <link rel="stylesheet" href="assets/styles/style.css" />
     <title>Scheda Alph</title>
   </head>
+  <style>
+    * {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
   <body>
-    <main class="screen_container">
-      <div class="scheda_content">
-        <!-- FOLDER ICON -->
-        <div class="folder" tabindex="0" id="folderEl">
-          <img
-            src="assets/img/old_icons/my-documents-folder-32x32.png"
-            alt=""
-            class="folder_icon"
-          />
-          <div class="folder_title">Alphard</div>
-        </div>
-
-        <!-- WARNING MODAL -->
-        <div class="window warning" id="warning_modal">
-          <div class="title-bar">
-            <div class="title-bar-text">Warning</div>
-          </div>
-          <div class="window-body warning_body">
-            <img src="assets/img/old_icons/msg_warning-0.png" alt="" />
-            <div class="warning_text">
-              <p>
-                Content in this folder is corrupt and may damage your device.
-              </p>
-              <p>Open anyway?</p>
-              <div class="button_container">
-                <button type="button" class="safe corrupt">YES</button>
-                <button type="button" class="corrupt">NO</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- FOLDER CONTENT -->
-        <div class="window folder_content">
-          <div class="title-bar">
-            <div class="title-bar-text">ALPHARD</div>
-            <div class="title-bar-controls">
-              <button aria-label="Close" id="folder_close"></button>
-            </div>
-          </div>
-          <div class="folder_content_window">
-            <div class="window-body">
-              <div class="datafolder">
-                <img src="assets/img/old_icons/folder-open-32x32.png" alt="" />
-                <div>ALPHARD</div>
-              </div>
-              <div class="filelist">
-                <div class="document" tabindex="1">
-                  <img
-                    src="assets/img/old_icons/notepad-file-32x32.png"
-                    alt=""
-                  />
-                  <div class="document_icon"></div>
-                  <div class="document_title">ID.txt</div>
-                </div>
-                <div class="document" tabindex="2">
-                  <img
-                    src="assets/img/old_icons/notepad-file-32x32.png"
-                    alt=""
-                  />
-                  <div class="document_icon"></div>
-                  <div class="document_title">PAST.txt</div>
-                </div>
-                <div class="document" tabindex="3">
-                  <img
-                    src="assets/img/old_icons/notepad-file-32x32.png"
-                    alt=""
-                  />
-                  <div class="document_icon"></div>
-                  <div class="document_title corrupt">
-                    CORVUS<span>.txt</span>
-                  </div>
-                </div>
-                <div class="document" tabindex="4">
-                  <img
-                    src="assets/img/old_icons/notepad-file-32x32.png"
-                    alt=""
-                  />
-                  <div class="document_icon"></div>
-                  <div class="document_title">OFF.txt</div>
-                </div>
-              </div>
-            </div>
-            <div class="status-bar">
-              <p class="status-bar-field">4 object(s)</p>
-              <p class="status-bar-field"></p>
-              <p class="status-bar-field">Data Save Inc.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- TEXT CONTENT -->
-        <div class="window text_content">
-          <div class="title-bar">
-            <div class="title-bar-text" id="doc_title">{{Title}}</div>
-            <div class="title-bar-controls">
-              <button aria-label="Close" id="doc_close"></button>
-            </div>
-          </div>
-          <div class="text_content_window">
-            <div class="window-body">
-              <iframe
-                src=""
-                frameborder="0"
-                width="450"
-                height="275"
-                id="doc_src"
-              ></iframe>
-            </div>
-            <div class="status-bar">
-              <p class="status-bar-field">
-                <span id="doc_word_field">{{n}}</span> Word(s)
-              </p>
-              <p class="status-bar-field">Page 1</p>
-              <p class="status-bar-field">
-                CPU Usage: <span id="doc_cpu_usage">{{r1-100}}</span>%
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <footer class="footer">Data Save Inc.</footer>
-    </main>
+    <iframe width="530" height="530" src="pcContent/"></iframe>
   </body>
-  <script src="assets/js/glitch_text.js"></script>
-  <script src="assets/js/open_warning.js"></script>
-  <script src="assets/js/folderController.js"></script>
 </html>
