@@ -54,4 +54,11 @@ div#centerDiv {
   background: white;
   display: block;
   z-index: 1;
+}
+
+#content {
+  width: 80%;
+  height: 80%;
+  border: solid red 1px;
+  display: flex;
 }/*# sourceMappingURL=OpStyle.css.map */
