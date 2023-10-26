@@ -7,12 +7,12 @@ window.onload = () => {
     duration: 700,
     fill: "forwards",
   }).onfinish = () => {
-    bottomDiv.animate([{ height: "0%", opacity: 0 }], {
+    bottomDiv.animate([{ height: "0%" }], {
       duration: 400,
       fill: "forwards",
     });
 
-    topDiv.animate([{ height: "0%", opacity: 0 }], {
+    topDiv.animate([{ height: "0%" }], {
       duration: 400,
       fill: "forwards",
     }).onfinish = () => {
