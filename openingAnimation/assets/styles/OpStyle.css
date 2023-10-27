@@ -74,6 +74,8 @@ div#centerDiv {
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
 #content {
