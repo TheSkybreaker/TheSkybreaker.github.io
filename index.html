@@ -14,23 +14,6 @@
       padding: 0;
       margin: 0;
     }
-
-    @media screen and (min-width: 501px) {
-      * {
-        overflow: hidden;
-      }
-    }
-
-    @media screen and (max-width: 500px) {
-      * {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-      }
-
-      *::-webkit-scrollbar {
-        display: none;
-      }
-    }
   </style>
   <body>
     <div class="screen_container">
@@ -40,7 +23,7 @@
       <iframe
         width="530"
         height="530"
-        style="position: absolute"
+        style="position: absolute; overflow: hidden;"
         src="openingAnimation/"
         id="mainIframe"
       ></iframe>
