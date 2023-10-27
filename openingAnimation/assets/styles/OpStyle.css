@@ -112,6 +112,7 @@ div#centerDiv {
 .cursor {
   position: relative;
   display: inline-block;
+  vertical-align: bottom;
 }
 
 .cursor::after {
@@ -119,7 +120,7 @@ div#centerDiv {
   top: 0;
   display: inline-block;
   background-color: #606060;
-  vertical-align: top;
+  vertical-align: bottom;
   width: 8px;
   /* Set height to the line height of .text */
   height: 24px;
