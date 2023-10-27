@@ -15,7 +15,7 @@ Element.prototype.writeText = async function (content) {
 
   for (const element of contentArray) {
     elem.textContent = `${elem.textContent}${element}`;
-    await wait(100);
+    await wait(75);
   }
 };
 
@@ -47,25 +47,25 @@ window.onload = () => {
 const textDisplay = async () => {
   await wait(500);
   await cursorText.writeText("login -u Run1c0rder -p\n");
+  await wait(1000);
+  cursorText.textContent += "root@000378:/home/user# password: ";
   await wait(1500);
+  await cursorText.writeText("***********\n");
+  await wait(2000);
+  cursorText.textContent += "wrong credentials \n";
+  await wait(1750);
   cursorText.textContent += "root@000378:/home/user# password: ";
-  await wait(2000);
-  await cursorText.writeText("***********");
-  await wait(2000);
-  cursorText.textContent += "\nwrong credentials \n";
-  await wait(2000);
-  cursorText.textContent += "root@000378:/home/user# password: ";
-  await wait(2000);
+  await wait(1750);
   await cursorText.writeText("****************\n");
   await wait(3000);
   cursorText.textContent += "login successful \n";
   await wait(1500);
   cursorText.textContent += "root@000378:/home/user# select operation: \n";
-  await wait(1500);
+  await wait(1000);
   await cursorText.writeText("1. Enter Safe Mode\n");
   await cursorText.writeText("2. Access Terminal\n");
   await cursorText.writeText("3. Shut Down\n");
-  await wait(1500);
+  await wait(750);
   cursorText.textContent += "root@000378:/home/user# 2 \n";
   await wait(1000);
   await cursorText.writeText("Access Terminal selected\n");
@@ -74,7 +74,7 @@ const textDisplay = async () => {
   await cursorText.writeText("Restoring GUI (this may take a while)...\n");
   await wait(5000);
   errorText.textContent += "!!ERROR!!\n";
-  await wait(2000);
+  await wait(1750);
   await errorText.writeText(
     "!!FILE SYSTEM IS CORRUPTED!!\nBOOT ANYWAY? [y/N]\n"
   );
