@@ -13,6 +13,12 @@
       border: 0;
       padding: 0;
       margin: 0;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    *::-webkit-scrollbar {
+      display: none;
     }
   </style>
   <body>
@@ -23,7 +29,7 @@
       <iframe
         width="530"
         height="530"
-        style="position: absolute;"
+        style="position: relative; overflow: hidden"
         src="openingAnimation/"
         id="mainIframe"
       ></iframe>
