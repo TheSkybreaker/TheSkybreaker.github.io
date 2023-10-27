@@ -10,7 +10,7 @@ main {
   width: 530px;
   height: 530px;
   overflow: hidden;
-  position: relative;
+  position: absolute;
 }
 main:after {
   content: "";
@@ -74,7 +74,7 @@ div#centerDiv {
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: column;
-  position: relative;
+  position: absolute;
   overflow: hidden;
 }
 

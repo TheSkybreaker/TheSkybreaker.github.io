@@ -13,7 +13,12 @@
       border: 0;
       padding: 0;
       margin: 0;
-      overflow: hidden;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    *::-webkit-scrollbar {
+      display: none;
     }
   </style>
   <body>
