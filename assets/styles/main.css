@@ -33,4 +33,5 @@ div#centerDiv {
   width: 530px;
   height: 530px;
   position: relative;
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
