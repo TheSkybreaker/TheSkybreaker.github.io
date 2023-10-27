@@ -10,6 +10,7 @@ main {
   width: 530px;
   height: 530px;
   position: relative;
+  overflow: hidden;
 }
 main:after {
   content: "";
