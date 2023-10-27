@@ -3,6 +3,7 @@
   box-sizing: border-box;
   image-rendering: pixelated;
   font-size: 14px;
+  overflow: hidden;
 }
 
 .screen_container {
