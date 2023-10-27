@@ -1,0 +1,36 @@
+div#topDiv {
+  width: 100%;
+  height: 0%;
+  opacity: 0.9;
+  background: black;
+  position: absolute;
+  top: 0%;
+  z-index: 2;
+}
+
+div#bottomDiv {
+  width: 100%;
+  height: 0%;
+  opacity: 0.9;
+  background: black;
+  position: absolute;
+  bottom: 0%;
+  z-index: 2;
+}
+
+div#centerDiv {
+  position: absolute;
+  height: 1px;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  background: white;
+  display: none;
+  z-index: 3;
+}
+
+.screen_container {
+  width: 530px;
+  height: 530px;
+  position: relative;
+}/*# sourceMappingURL=main.css.map */

@@ -6,6 +6,7 @@
     <title>Scheda Alph</title>
     <link rel="stylesheet" href="pcContent/assets/styles/resetter.css" />
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="assets/styles/main.css">
   </head>
   <style>
     * {
@@ -21,6 +22,12 @@
     }
   </style>
   <body>
-    <iframe width="530" height="530" src="pcContent/"></iframe>
+    <div class="screen_container">
+      <div id="topDiv"></div>
+      <div id="centerDiv"></div>
+      <div id="bottomDiv"></div>
+      <iframe width="530" height="530" style="position: absolute;" src="openingAnimation/" id="mainIframe"></iframe>
+    </div>
   </body>
+  <script src="assets/js/main.js"></script>
 </html>

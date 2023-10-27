@@ -41,6 +41,7 @@ div#topDiv {
   background: black;
   position: absolute;
   top: 0%;
+  z-index: 2;
 }
 
 div#bottomDiv {
@@ -50,6 +51,7 @@ div#bottomDiv {
   background: black;
   position: absolute;
   bottom: 0%;
+  z-index: 2;
 }
 
 div#centerDiv {
@@ -60,7 +62,7 @@ div#centerDiv {
   width: 0%;
   background: white;
   display: block;
-  z-index: 1;
+  z-index: 3;
 }
 
 #container {
@@ -68,17 +70,41 @@ div#centerDiv {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 #content {
-  border: solid red 1px;
   width: 90%;
   height: 90%;
   color: #0B8A20;
-  display: none;
+  opacity: 0;
 }
 
+.cursor_text {
+  white-space: pre;
+}
+
+#error_text {
+  white-space: pre;
+  color: #82021E;
+  text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+  letter-spacing: 0.125em;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
 .cursor {
   position: relative;
   display: inline-block;
