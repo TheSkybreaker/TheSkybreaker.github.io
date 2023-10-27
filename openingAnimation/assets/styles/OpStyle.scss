@@ -9,6 +9,7 @@ main {
     background-color: #323133;
     width: 530px;
     height: 530px;
+    overflow: hidden;
     position: relative;
 
     &:after {
