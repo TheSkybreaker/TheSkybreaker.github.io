@@ -6,7 +6,7 @@
     <title>Scheda Alph</title>
     <link rel="stylesheet" href="pcContent/assets/styles/resetter.css" />
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
-    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/main.css" />
   </head>
   <style>
     * {
@@ -15,16 +15,16 @@
       margin: 0;
     }
 
-    @media screen and (mij-width: 501px) {
-      * { 
+    @media screen and (min-width: 501px) {
+      * {
         overflow: hidden;
       }
     }
 
     @media screen and (max-width: 500px) {
       * {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
       }
 
       *::-webkit-scrollbar {
@@ -37,7 +37,13 @@
       <div id="topDiv"></div>
       <div id="centerDiv"></div>
       <div id="bottomDiv"></div>
-      <iframe width="530" height="530" style="position: absolute;" src="openingAnimation/" id="mainIframe"></iframe>
+      <iframe
+        width="530"
+        height="530"
+        style="position: absolute"
+        src="openingAnimation/"
+        id="mainIframe"
+      ></iframe>
     </div>
   </body>
   <script src="assets/js/main.js"></script>

@@ -9,8 +9,8 @@ main {
   background-color: #323133;
   width: 530px;
   height: 530px;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 main:after {
   content: "";
