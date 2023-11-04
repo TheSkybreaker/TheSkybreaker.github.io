@@ -29,6 +29,7 @@
   justify-content: center;
   align-items: center;
   height: 490px;
+  overflow: hidden;
 }
 
 .folder {
