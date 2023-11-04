@@ -1,7 +1,8 @@
 // Mi secca spiegare. Magia magia magia, terribile, non è nemmeno mio. Lo rifarò, nel frattempo va bene
 // I commenti sono tutti miei
 
-const chars = "☺Σ×Π#-_¯—→↓↑←0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZ";
+const chars =
+  "☺Σ×Π#-_¯0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghijklmnopqrstuvwxyz";
 
 var Glitch = function (
   selector,
