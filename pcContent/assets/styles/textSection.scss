@@ -8,18 +8,22 @@
     * {
         image-rendering: pixelated;
     }
+    padding-right: 2px;
+
+    i {
+        color: #0B8A20;
+    }
 }
 
 .lefty {
     display: inline;
     float: left;
-    padding-right: 8px
+    margin-right: 8px
 }
 
 .righty {
     display: inline;
     float: right;
-    padding-left: 8px
 }
 
 p {
