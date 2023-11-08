@@ -5,6 +5,10 @@
   font-size: 14px;
 }
 
+body {
+  overflow: hidden;
+}
+
 .screen_container {
   width: 530px;
   height: 530px;
