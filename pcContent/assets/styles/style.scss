@@ -6,6 +6,10 @@
     // overflow: hidden;
 }
 
+body {
+    overflow: hidden;
+}
+
 .screen_container {
     width: 530px;
     height: 530px;
@@ -15,7 +19,6 @@
     justify-content: space-between;
     flex-direction: column;
     background: #008080;
-    
 }
 
 @keyframes lines {
@@ -34,24 +37,6 @@
     align-items: center;
     height: 490px;
     overflow: hidden;
-
-    // Cant seem to like it, sooo it will stay like that
-    // Fede dice di togliere, mi fido
-    // &:before {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0px;
-    //     left: 0px;
-    //     right: 0px;
-    //     bottom: 0px;
-    //     z-index: 1000;
-    //     background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 7px);
-    //     background-size: 100% 5px;
-    //     animation: lines 5s ease-out infinite;
-    //     opacity: 0.3;
-    //     mix-blend-mode: color-burn;
-    //     pointer-events: none;
-    // }
 }
 
 .folder {
