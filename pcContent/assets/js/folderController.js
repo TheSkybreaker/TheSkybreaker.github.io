@@ -21,7 +21,7 @@ document.querySelector("#folder_close").addEventListener("click", async () => {
   glitchArray.map((glitch) => glitch.endExecution());
 });
 
-let filesArray = ["id", "past", "off"];
+let filesArray = ["id", "past", "off", "meetings"];
 
 let documentList = document.querySelectorAll(".document");
 let iframe = document.querySelector("#doc_src");

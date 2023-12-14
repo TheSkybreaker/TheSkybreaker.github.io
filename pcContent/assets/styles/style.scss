@@ -191,9 +191,15 @@ body {
 }
 
 .filelist {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 175px;
+
+    &_flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .warning {
@@ -222,7 +228,7 @@ body {
 }
 
 .folder_content {
-    width: 330px;
+    width: 340px;
     height: 260px;
     z-index: -2;
     position: absolute;
@@ -241,6 +247,7 @@ body {
             // flex-wrap: wrap;
             // justify-content: space-around;
             margin-top: 20px;
+            margin-right: 3px;
             color: #000;
         }
     }

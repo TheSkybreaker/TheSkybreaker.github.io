@@ -157,6 +157,11 @@ body {
 }
 
 .filelist {
+  width: 100%;
+  overflow-y: auto;
+  max-height: 175px;
+}
+.filelist_flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -184,7 +189,7 @@ body {
 }
 
 .folder_content {
-  width: 330px;
+  width: 340px;
   height: 260px;
   z-index: -2;
   position: absolute;
@@ -197,6 +202,7 @@ body {
 .folder_content_window > .window-body {
   display: flex;
   margin-top: 20px;
+  margin-right: 3px;
   color: #000;
 }
 
