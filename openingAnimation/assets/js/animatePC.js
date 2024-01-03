@@ -60,13 +60,15 @@ const textDisplay = async () => {
   await wait(3000);
   cursorText.textContent += "login successful \n";
   await wait(1500);
-  cursorText.textContent += "root@000378:/home/user# select operation: \n";
+  cursorText.textContent += "select operation: \n";
   await wait(1000);
   await cursorText.writeText("1. Enter Safe Mode\n");
   await cursorText.writeText("2. Access Terminal\n");
   await cursorText.writeText("3. Shut Down\n");
   await wait(750);
-  cursorText.textContent += "root@000378:/home/user# 2 \n";
+  cursorText.textContent += "root@000378:/home/user/Run1c0rder# ";
+  await wait(750);
+  await cursorText.writeText("2\n");
   await wait(1000);
   await cursorText.writeText("Access Terminal selected\n");
   await cursorText.writeText("Loading memory...\n");
@@ -79,7 +81,7 @@ const textDisplay = async () => {
     "!!FILE SYSTEM IS CORRUPTED!!\nBOOT ANYWAY? [y/N]\n"
   );
   await wait(2000);
-  endText.textContent += "root@000378:/home/user# ";
+  endText.textContent += "root@000378:/home/user/Run1c0rder# ";
   await wait(1500);
   endText.writeText("Y");
   localStorage.setItem("completed", true);
