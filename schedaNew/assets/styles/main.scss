@@ -68,9 +68,29 @@ body {
         border-bottom: 1px solid;
         margin: 0 -20px 10px;
         text-align: right;
+        display: flex;
+        justify-content: space-between;
 
         & > div {
             margin-right: 5px;
+        }
+    }
+}
+
+.player-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 3px;
+    margin-left: 20px;
+
+    & button {
+        background-color: #999;
+        border: none;
+        padding: 5px;
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }
@@ -231,7 +251,7 @@ body {
         color: #999;
     }
 
-    & > div {
+    & div {
         text-align: justify;
         color: #999;
         margin-top: 10px;
@@ -255,7 +275,7 @@ body {
             color: #b81242;
         }
 
-        & > s,
+        & s,
         i,
         u {
             color: #b81242;
@@ -266,6 +286,16 @@ body {
         display: block;
         margin-top: 5px;
     }
+}
+
+div.meetings {
+    u {
+        color: #999;
+    }
+}
+
+#katniss {
+    color: #b81242;
 }
 
 .selected-1.section-labs ~ .section-txt > div {

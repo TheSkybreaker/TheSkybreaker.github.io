@@ -29,19 +29,44 @@
         <div class="container">
             <div>
                 <div class="container-title">
+                    <div class="player-control">
+                        <audio
+                            id="player"
+                            src="assets/audio/Aviators - Slasher.mp3"
+                            autoplay
+                            loop></audio>
+                        <button
+                            onclick="document.getElementById('player').play()"
+                            style="mask: url(assets/img/svg/play.svg)"></button>
+                        <button
+                            onclick="document.getElementById('player').pause()"
+                            style="mask: url(assets/img/svg/stop.svg)"></button>
+                        <button
+                            onclick="document.getElementById('player').volume += 0.05"
+                            style="mask: url(assets/img/svg/vol_up.svg)"></button>
+                        <button
+                            onclick="document.getElementById('player').volume -= 0.05"
+                            style="mask: url(assets/img/svg/vol_down.svg)"></button>
+                    </div>
+
                     <div>Alphard Glyn Varis</div>
                 </div>
 
                 <div class="container-fx">
                     <div class="container-img">
                         <div>
-                            <img src="assets/img/scheda/character.png" alt="" id='img'>
+                            <img
+                                src="assets/img/scheda/character.png"
+                                alt=""
+                                id="img" />
                         </div>
                     </div>
                     <div class="container-dd">
                         <div><b>Born</b><i>28 Gennaio 774 &middot; Desierto</i></div>
                         <div><b>Mask</b><i>Corvus &middot; Crime Sorciére</i></div>
-                        <div><b>Ability</b><i>Ice Mage &middot; <u>Poison Dragon Slayer</u></i></div>
+                        <div>
+                            <b>Ability</b><i>Ice Mage &middot; <u>Poison Dragon Slayer</u></i>
+                        </div>
                         <div><b>Often found</b><i>Kunugi &middot; Oak &middot; Crocus</i></div>
                     </div>
                 </div>
@@ -174,10 +199,26 @@
                             <div class="section-ttx">
                                 <i class="cp cp-camera-o"></i>
                                 <b>Meetings</b>
+                                <div class="meetings">
+                                    <b>By my side, still</b>
+                                    <u id="katniss">Katniss</u>, إميفال فردانت &middot; for I can't understand those
+                                    feelings, but I still desire to treasure them | <u>Nysika</u> &middot; more than
+                                    comrades, friend | <u>Siegrid</u> &middot; from you I learned how to not leave
+                                    comrades behind | <u>Danmel</u> &middot; may the mask rest lightly on you |
+                                    <u>Lee</u> &middot; nowadays is more than transactional |
+                                    <u>Tiaolu, Gioia, Naito</u> &middot; can't help but despise how this genuine bond
+                                    affects me | <u>Melinoe</u> &middot; not for sweets or tea, but the drama |
+                                    <u>Tsukiko</u> &middot; somewhat, I feel responsible for your growth |
+                                    <u>Heclpetia</u> &middot; looking forward for the next update
+                                </div>
                                 <div>
-                                    Brownie chocolate bar marshmallow jelly beans sesame snaps wafer. Candy danish oat
-                                    cake tiramisu liquorice ice cream gummi bears cupcake danish. Sweet liquorice
-                                    chocolate cake cookie cake chupa chups macaroon chocolate bar wafer.
+                                    <b>Fleeting passage</b>
+                                    Adam, Akemi, Anne, Artemisia, Asher, Chronos, Cosme, Dahlia, Delaila, Dike,
+                                    Dreyfius, Drystan, Eder, Eight, Eiko, Eluned, Enkai, Eve, Evie, Hecate, Hina, Isamu,
+                                    Jakob, Joseff, Jughead, Jules, Kia, Koichi, Kryon, Lorex, Lynn, Melinoe, Mia,
+                                    Miranda, Moe, Monet, Myra, Nadya, Namine, Otto, Outis, Ravy, Ray, Regina, Rui,
+                                    Saber, Serafeim, Shireen, Siegvar, Soze, Susanoo, Violate, Wolfgang, Xiaolong,
+                                    Yachiru, Yoshihiro, Yosuke, Yousuke, Zark
                                 </div>
                             </div>
 
@@ -210,8 +251,15 @@
                                     </p>
                                     <p>
                                         Crediti della base del codice a
-                                        <a href="https://emmescodes.tumblr.com/" target='_blank'>emmescodes</a> da cui ho rubato e
-                                        rifatto
+                                        <a
+                                            href="https://emmescodes.tumblr.com/"
+                                            target="_blank"
+                                            >emmescodes</a
+                                        >
+                                        da cui ho rubato e rifatto
+                                    </p>
+                                    <p>
+                                        Crediti del codice della musica a Leanna, sono troppo pigro
                                     </p>
                                     <p>Non penso ci sia altro da dire, ci si becca in game!</p>
                                     <hr />

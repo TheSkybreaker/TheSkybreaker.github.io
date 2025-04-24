@@ -63,9 +63,28 @@ body {
   border-bottom: 1px solid;
   margin: 0 -20px 10px;
   text-align: right;
+  display: flex;
+  justify-content: space-between;
 }
 .container-title > div {
   margin-right: 5px;
+}
+
+.player-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
+  margin-left: 20px;
+}
+.player-control button {
+  background-color: #999;
+  border: none;
+  padding: 5px;
+}
+.player-control button:hover {
+  cursor: pointer;
 }
 
 .container-fx {
@@ -214,36 +233,44 @@ body {
 .section-ttx > div * {
   color: #999;
 }
-.section-ttx > div {
+.section-ttx div {
   text-align: justify;
   color: #999;
   margin-top: 10px;
   -webkit-hyphens: auto;
           hyphens: auto;
 }
-.section-ttx > div > hr {
+.section-ttx div > hr {
   border-color: #999;
   display: block;
   margin: 7px 0;
 }
-.section-ttx > div > p {
+.section-ttx div > p {
   margin: 3px 0;
 }
-.section-ttx > div > b {
+.section-ttx div > b {
   font: 20px Odibee Sans;
   border-bottom: solid 1px rgba(153, 153, 153, 0.6666666667);
   display: block;
   margin-bottom: 5px;
   color: #b81242;
 }
-.section-ttx > div > s,
-.section-ttx > div i,
-.section-ttx > div u {
+.section-ttx div s,
+.section-ttx div i,
+.section-ttx div u {
   color: #b81242;
 }
 .section-ttx > div br {
   display: block;
   margin-top: 5px;
+}
+
+div.meetings u {
+  color: #999;
+}
+
+#katniss {
+  color: #b81242;
 }
 
 .selected-1.section-labs ~ .section-txt > div {
